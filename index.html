@@ -16,32 +16,30 @@
     <title>SCSS card tutorial</title>
   </head>
 
-  <body class="bg-secondary d-flex container-fluid justify-content-center align-items-center min-vh-100 text-light">
-    <div id="card" class="bg-dark flex-lg-row flex-column-reverse d-flex rounded-3 overflow-hidden w-75">
-      <div id="card-text" class="col-lg-6 col-12 p-5 d-flex flex-column justify-content-between text-center">
+  <body class="bg-midnightblue d-flex container-fluid justify-content-center align-items-center min-vh-100 text-white">
+    <div id="card" class="bg-darkslateblue d-flex flex-lg-row flex-column rounded-3 overflow-hidden w-75 flex-column-reverse">
+      <div id="card-text" class="col-lg-6 col-12 p-5 d-flex flex-column justify-content-between">
         <div class="w-100">
-          <h1 class="fs-1 fw-bold">Get <span class="text-primary">insights</span> that help your business grow.</h1>
-          <p class="pt-4 text-secondary">
-            Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
-          </p>
+          <h1 class="fs-1 fw-bold">Get <span class="color-midnightblue">insights</span> that help your business grow.</h1>
+          <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.</p>
         </div>
-        <div id="stats" class="d-flex flex-column flex-lg-row justify-content-between pt-5">
-          <div class="d-flex flex-column mb-3 mb-lg-0 align-items-lg-start">
-            <p class="fw-bold fs-3 m-0">10k+</p>
-            <p class="m-0 text-secondary">COMPANIES</p>
+        <div id="stats" class="d-flex flex-lg-row flex-column justify-content-between align-items-center">
+          <div class="mb-4 mb-lg-0 d-flex flex-column align-items-center align-items-lg-start">
+            <p class="fw-bold fs-3 mb-1">10k+</p>
+            <p class="m-0">COMPANIES</p>
           </div>
-          <div class="mb-3 mb-lg-0 d-flex flex-column align-items-lg-start align-items-center">
-            <p class="fw-bold fs-3 m-0">314</p>
-            <p class="m-0 text-secondary">TEMPLATES</p>
+          <div class="mb-4 mb-lg-0 d-flex flex-column align-items-lg-start align-items-center">
+            <p class="fw-bold fs-3 mb-1">314</p>
+            <p class="m-0">TEMPLATES</p>
           </div>
-          <div class="mb-3 d-flex flex-column align-items-lg-start align-items-center">
-            <p class="fw-bold fs-3 m-0">12M</p>
-            <p class="m-0 text-secondary">QUERIES</p>
+          <div class="d-flex flex-column align-items-lg-start align-items-center">
+            <p class="fw-bold fs-3 mb-1">12M</p>
+            <p class="m-0">QUERIES</p>
           </div>
         </div>
       </div>
       <div id="card-image" class="position-relative col-lg-6 col-12">
-        <img class="col-6 h-100 w-100" src="./images/image-header.jpg" alt="office" />
+        <img class="col-6 w-100 h-100" style="object-fit: cover" src="./images/image-header.jpg" alt="office people" />
         <div class="overlay"></div>
       </div>
     </div>

@@ -1,3 +1,31 @@
+body {
+  color: white;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .d-flex {
   display: flex;
   flex-direction: row;
@@ -12,7 +40,15 @@ $baseFontSize: 1.5rem;
   }
 }
 
-$baseSize: 5px;
+$borderRadiusBase: 2px;
+
+@for $i from 0 through 5 {
+  .rounded-#{$i} {
+    border-radius: $borderRadiusBase * $i;
+  }
+}
+
+$baseSize: 8px;
 
 @for $i from 0 through 5 {
   .m-#{$i} {
@@ -20,6 +56,9 @@ $baseSize: 5px;
   }
   .mb-#{$i} {
     margin-bottom: $baseSize * $i;
+  }
+  .mt-#{$i} {
+    margin-top: $baseSize * $i;
   }
   .ms-#{$i} {
     margin-left: $baseSize * $i;
@@ -35,22 +74,50 @@ $baseSize: 5px;
     margin-top: $baseSize * $i;
     margin-bottom: $baseSize * $i;
   }
+
+  .p-#{$i} {
+    padding: $baseSize * $i;
+  }
+  .pb-#{$i} {
+    padding-bottom: $baseSize * $i;
+  }
+  .pt-#{$i} {
+    padding-top: $baseSize * $i;
+  }
+  .ps-#{$i} {
+    padding-left: $baseSize * $i;
+  }
+  .pe-#{$i} {
+    padding-right: $baseSize * $i;
+  }
+  .px-#{$i} {
+    padding-left: $baseSize * $i;
+    padding-right: $baseSize * $i;
+  }
+  .py-#{$i} {
+    padding-top: $baseSize * $i;
+    padding-bottom: $baseSize * $i;
+  }
 }
 
-.flex-colum {
+.flex-column {
   flex-direction: column;
 }
 
-.w-100 {
-  width: 100%;
-}
+$palette: (
+  midnightblue: #1b1937,
+  darkslateblue: #5f3158,
+  indianred: #a54c64,
+  white: #fff,
+);
 
-.h-100 {
-  height: 100%;
-}
-
-.fw-bold {
-  font-weight: bold;
+@each $name, $value in $palette {
+  .color-#{$name} {
+    color: $value;
+  }
+  .bg-#{$name} {
+    background-color: $value;
+  }
 }
 
 $breakpoints: (
@@ -80,6 +147,18 @@ $breakpoints: (
       align-items: start;
     }
   }
+
+  @for $i from 0 through 5 {
+    .mb-#{$name}-#{$i} {
+      @media only screen and (min-width: $value) {
+        margin-bottom: $baseSize * $i;
+      }
+    }
+  }
+}
+
+.justify-content-between {
+  justify-content: space-between;
 }
 
 @for $i from 1 through 12 {
@@ -105,4 +184,16 @@ $breakpoints: (
       }
     }
   }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.fw-bold {
+  font-weight: bold;
 }
